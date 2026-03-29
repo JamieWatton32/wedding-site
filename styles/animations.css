@@ -1,0 +1,169 @@
+/* ============================================================
+   ANIMATIONS.CSS — Scroll-triggered fade/slide transitions
+   Uses classes toggled by Intersection Observer in index.js
+   ============================================================ */
+
+/* ---------- Base: hidden state for animated elements ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  will-change: opacity, transform;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- Directional variants ---------- */
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  will-change: opacity, transform;
+}
+
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  will-change: opacity, transform;
+}
+
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ---------- Scale variant ---------- */
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  will-change: opacity, transform;
+}
+
+.reveal-scale.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ---------- Fade only (no movement) ---------- */
+.reveal-fade {
+  opacity: 0;
+  transition: opacity 1s ease;
+  will-change: opacity;
+}
+
+.reveal-fade.visible {
+  opacity: 1;
+}
+
+/* ---------- Staggered children ---------- */
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.stagger-children.visible > *:nth-child(1) { transition-delay: 0s; }
+.stagger-children.visible > *:nth-child(2) { transition-delay: 0.1s; }
+.stagger-children.visible > *:nth-child(3) { transition-delay: 0.2s; }
+.stagger-children.visible > *:nth-child(4) { transition-delay: 0.3s; }
+.stagger-children.visible > *:nth-child(5) { transition-delay: 0.4s; }
+.stagger-children.visible > *:nth-child(6) { transition-delay: 0.5s; }
+.stagger-children.visible > *:nth-child(7) { transition-delay: 0.6s; }
+.stagger-children.visible > *:nth-child(8) { transition-delay: 0.7s; }
+
+.stagger-children.visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- Hero-specific entrance ---------- */
+.hero-enter {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroFadeIn 1.2s ease forwards;
+}
+
+.hero-enter-delay-1 { animation-delay: 0.3s; }
+.hero-enter-delay-2 { animation-delay: 0.6s; }
+.hero-enter-delay-3 { animation-delay: 0.9s; }
+.hero-enter-delay-4 { animation-delay: 1.2s; }
+
+@keyframes heroFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- Parallax blobs (gentle sway) ---------- */
+@keyframes blobSway1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(20px, -15px) scale(1.03); }
+  66% { transform: translate(-15px, 10px) scale(0.97); }
+}
+
+@keyframes blobSway2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-25px, 20px) scale(1.05); }
+  66% { transform: translate(10px, -10px) scale(0.95); }
+}
+
+@keyframes blobSway3 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(15px, 15px); }
+}
+
+.hero-bg .wc-blob-1 { animation: blobSway1 20s ease-in-out infinite; }
+.hero-bg .wc-blob-2 { animation: blobSway2 25s ease-in-out infinite; }
+.hero-bg .wc-blob-3 { animation: blobSway3 18s ease-in-out infinite; }
+.hero-bg .wc-blob-4 { animation: blobSway1 22s ease-in-out infinite reverse; }
+.hero-bg .wc-blob-5 { animation: blobSway2 16s ease-in-out infinite; }
+
+/* ---------- Fade-out on exit (applied via JS) ---------- */
+.reveal-exit {
+  transition: opacity 0.5s ease;
+}
+
+.reveal-exit.fading-out {
+  opacity: 0.3;
+}
+
+/* ---------- Nav entrance ---------- */
+@keyframes navSlideIn {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+
+/* ---------- Reduced motion preference ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale,
+  .reveal-fade,
+  .stagger-children > *,
+  .hero-enter {
+    opacity: 1;
+    transform: none;
+    animation: none;
+    transition: none;
+  }
+
+  .hero-bg .wc-blob {
+    animation: none;
+  }
+
+  .floating-dot {
+    animation: none;
+  }
+}

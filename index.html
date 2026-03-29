@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jamie &amp; Hannah — September 25, 2027</title>
+  <meta name="description" content="Join us to celebrate the wedding of Jamie and Hannah on September 25, 2027.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/watercolor.css">
+  <link rel="stylesheet" href="styles/animations.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <nav class="site-nav" id="siteNav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-brand" aria-label="Back to top">J &amp; H</a>
+
+      <button class="nav-hamburger" id="navHamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#story" data-nav>Our Story</a>
+        <a href="#venue" data-nav>Venue</a>
+        <a href="#faq" data-nav>FAQ</a>
+        <a href="#registry" data-nav>Registry</a>
+        <a href="#rsvp" data-nav>RSVP</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="hero" id="hero">
+    <!-- Watercolor background blobs -->
+    <div class="hero-bg">
+      <div class="wc-blob wc-blob-1"></div>
+      <div class="wc-blob wc-blob-2"></div>
+      <div class="wc-blob wc-blob-3"></div>
+      <div class="wc-blob wc-blob-4"></div>
+      <div class="wc-blob wc-blob-5"></div>
+    </div>
+
+    <!-- Botanical accents -->
+    <div class="leaf-accent leaf-1 pos-1"></div>
+    <div class="leaf-accent leaf-2 pos-2"></div>
+    <div class="leaf-accent leaf-3 pos-3"></div>
+
+    <!-- Wildflower accents -->
+    <!-- Lavender sprig — bottom-left -->
+    <svg class="wildflower lg rot-15" style="bottom:8%; left:4%;" viewBox="0 0 100 200" aria-hidden="true">
+      <defs>
+        <linearGradient id="lavender-g" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#c5b8d4"/>
+          <stop offset="100%" stop-color="#9b85b5"/>
+        </linearGradient>
+        <linearGradient id="stem-g" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#8ab080"/>
+          <stop offset="100%" stop-color="#6d9460"/>
+        </linearGradient>
+      </defs>
+      <path d="M50 200 Q48 140 50 80" stroke="url(#stem-g)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <path d="M50 80 Q42 70 38 55" stroke="url(#stem-g)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <ellipse cx="46" cy="72" rx="5" ry="8" fill="url(#lavender-g)" opacity="0.7"/>
+      <ellipse cx="54" cy="65" rx="5" ry="8" fill="url(#lavender-g)" opacity="0.65"/>
+      <ellipse cx="48" cy="56" rx="4.5" ry="7" fill="url(#lavender-g)" opacity="0.6"/>
+      <ellipse cx="55" cy="48" rx="4" ry="7" fill="url(#lavender-g)" opacity="0.55"/>
+      <ellipse cx="50" cy="40" rx="4" ry="6.5" fill="url(#lavender-g)" opacity="0.5"/>
+      <ellipse cx="52" cy="32" rx="3.5" ry="6" fill="url(#lavender-g)" opacity="0.45"/>
+      <ellipse cx="49" cy="25" rx="3" ry="5" fill="url(#lavender-g)" opacity="0.4"/>
+      <ellipse cx="36" cy="50" rx="4" ry="7" fill="url(#lavender-g)" opacity="0.5" transform="rotate(-15 36 50)"/>
+      <ellipse cx="34" cy="42" rx="3.5" ry="6" fill="url(#lavender-g)" opacity="0.45" transform="rotate(-15 34 42)"/>
+      <!-- Leaves -->
+      <ellipse cx="40" cy="130" rx="12" ry="4" fill="#8ab080" opacity="0.4" transform="rotate(-35 40 130)"/>
+      <ellipse cx="60" cy="110" rx="11" ry="3.5" fill="#8ab080" opacity="0.35" transform="rotate(30 60 110)"/>
+    </svg>
+
+    <!-- Eucalyptus branch — top-right -->
+    <svg class="wildflower lg flip-x rot-n15" style="top:10%; right:3%;" viewBox="0 0 120 200" aria-hidden="true">
+      <defs>
+        <linearGradient id="euc-g" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#a8c5a0"/>
+          <stop offset="100%" stop-color="#7da872"/>
+        </linearGradient>
+      </defs>
+      <path d="M60 200 Q58 150 55 100 Q52 60 60 20" stroke="#7d9470" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <ellipse cx="45" cy="45" rx="14" ry="8" fill="url(#euc-g)" opacity="0.5" transform="rotate(-40 45 45)"/>
+      <ellipse cx="72" cy="55" rx="14" ry="8" fill="url(#euc-g)" opacity="0.45" transform="rotate(35 72 55)"/>
+      <ellipse cx="42" cy="75" rx="15" ry="8.5" fill="url(#euc-g)" opacity="0.5" transform="rotate(-30 42 75)"/>
+      <ellipse cx="74" cy="88" rx="14" ry="8" fill="url(#euc-g)" opacity="0.45" transform="rotate(40 74 88)"/>
+      <ellipse cx="44" cy="108" rx="15" ry="9" fill="url(#euc-g)" opacity="0.5" transform="rotate(-35 44 108)"/>
+      <ellipse cx="72" cy="122" rx="14" ry="8.5" fill="url(#euc-g)" opacity="0.45" transform="rotate(30 72 122)"/>
+      <ellipse cx="46" cy="142" rx="16" ry="9" fill="url(#euc-g)" opacity="0.5" transform="rotate(-25 46 142)"/>
+      <ellipse cx="70" cy="158" rx="15" ry="9" fill="url(#euc-g)" opacity="0.45" transform="rotate(35 70 158)"/>
+      <ellipse cx="58" cy="30" rx="10" ry="6" fill="url(#euc-g)" opacity="0.4" transform="rotate(-20 58 30)"/>
+    </svg>
+
+    <!-- Floating dots -->
+    <div class="floating-dot rose" style="top:20%; left:10%; animation-delay: 0s;"></div>
+    <div class="floating-dot sage" style="top:60%; right:12%; animation-delay: 2s;"></div>
+    <div class="floating-dot gold" style="bottom:25%; left:25%; animation-delay: 4s;"></div>
+    <div class="floating-dot lavender" style="top:35%; right:30%; animation-delay: 6s;"></div>
+
+    <div class="hero-content">
+      <h1 class="hero-names hero-enter">
+        Jamie
+        <span class="hero-ampersand">&amp;</span>
+        Hannah
+      </h1>
+      <p class="hero-date hero-enter hero-enter-delay-1">September 25, 2027</p>
+      <p class="hero-tagline hero-enter hero-enter-delay-2">We're getting married!</p>
+
+      <div class="countdown hero-enter hero-enter-delay-3" id="countdown">
+        <div class="countdown-item">
+          <span class="countdown-number" id="countDays">---</span>
+          <span class="countdown-label">Days</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-number" id="countHours">--</span>
+          <span class="countdown-label">Hours</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-number" id="countMinutes">--</span>
+          <span class="countdown-label">Minutes</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-number" id="countSeconds">--</span>
+          <span class="countdown-label">Seconds</span>
+        </div>
+      </div>
+    </div>
+      <div class="scroll-indicator hero-enter hero-enter-delay-4">
+        <span>Scroll</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </div>
+  </section>
+
+  <!-- ============================================================
+       WAVE DIVIDER
+       ============================================================ -->
+  <div class="section-divider">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,50 1440,40 L1440,80 L0,80 Z" fill="#fdf9f3" opacity="0.5"/>
+      <path d="M0,50 C480,10 960,70 1440,30 L1440,80 L0,80 Z" fill="#fdf9f3" opacity="0.3"/>
+    </svg>
+  </div>
+
+  <!-- ============================================================
+       OUR STORY
+       ============================================================ -->
+  <section id="story">
+    <div class="section-bg story-bg">
+      <div class="wc-blob wc-blob-1"></div>
+      <div class="wc-blob wc-blob-2"></div>
+    </div>
+
+    <!-- Wildflower accents -->
+    <!-- Small rose — right margin -->
+    <svg class="wildflower md rot-n15" style="top:15%; right:5%;" viewBox="0 0 100 120" aria-hidden="true">
+      <defs>
+        <radialGradient id="rose-g" cx="50%" cy="40%" r="50%">
+          <stop offset="0%" stop-color="#e8c5d0"/>
+          <stop offset="60%" stop-color="#d4a0a0"/>
+          <stop offset="100%" stop-color="#c48888"/>
+        </radialGradient>
+      </defs>
+      <path d="M50 120 Q50 85 50 65" stroke="#7d9470" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <ellipse cx="38" cy="90" rx="10" ry="4" fill="#8ab080" opacity="0.4" transform="rotate(-40 38 90)"/>
+      <ellipse cx="62" cy="82" rx="9" ry="3.5" fill="#8ab080" opacity="0.35" transform="rotate(35 62 82)"/>
+      <!-- Petals -->
+      <ellipse cx="50" cy="45" rx="16" ry="20" fill="url(#rose-g)" opacity="0.5"/>
+      <ellipse cx="38" cy="48" rx="14" ry="16" fill="url(#rose-g)" opacity="0.4" transform="rotate(-20 38 48)"/>
+      <ellipse cx="62" cy="48" rx="14" ry="16" fill="url(#rose-g)" opacity="0.4" transform="rotate(20 62 48)"/>
+      <ellipse cx="44" cy="36" rx="12" ry="14" fill="#e8c5d0" opacity="0.45" transform="rotate(-10 44 36)"/>
+      <ellipse cx="56" cy="36" rx="12" ry="14" fill="#e8c5d0" opacity="0.45" transform="rotate(10 56 36)"/>
+      <ellipse cx="50" cy="38" rx="8" ry="10" fill="#d4a0a0" opacity="0.35"/>
+      <circle cx="50" cy="40" r="4" fill="#c4a882" opacity="0.3"/>
+    </svg>
+
+    <!-- Baby's breath cluster — left margin -->
+    <svg class="wildflower md faint rot-15" style="bottom:12%; left:3%;" viewBox="0 0 100 140" aria-hidden="true">
+      <path d="M50 140 Q48 110 50 80" stroke="#8ab080" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <path d="M50 95 Q35 75 28 60" stroke="#8ab080" stroke-width="1" fill="none" stroke-linecap="round"/>
+      <path d="M50 85 Q65 68 72 52" stroke="#8ab080" stroke-width="1" fill="none" stroke-linecap="round"/>
+      <path d="M50 80 Q48 65 46 50" stroke="#8ab080" stroke-width="1" fill="none" stroke-linecap="round"/>
+      <path d="M28 60 Q22 50 18 42" stroke="#8ab080" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+      <path d="M28 60 Q30 48 34 40" stroke="#8ab080" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+      <path d="M72 52 Q78 42 82 34" stroke="#8ab080" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+      <path d="M72 52 Q68 40 66 32" stroke="#8ab080" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+      <!-- Tiny blossoms -->
+      <circle cx="18" cy="40" r="3.5" fill="#faf5f0" opacity="0.6"/>
+      <circle cx="34" cy="38" r="3" fill="#faf5f0" opacity="0.55"/>
+      <circle cx="46" cy="48" r="3.5" fill="#faf5f0" opacity="0.6"/>
+      <circle cx="66" cy="30" r="3" fill="#faf5f0" opacity="0.55"/>
+      <circle cx="82" cy="32" r="3.5" fill="#faf5f0" opacity="0.6"/>
+      <circle cx="50" cy="78" r="2.5" fill="#faf5f0" opacity="0.5"/>
+      <circle cx="26" cy="58" r="2" fill="#faf5f0" opacity="0.45"/>
+      <circle cx="74" cy="50" r="2" fill="#faf5f0" opacity="0.45"/>
+      <!-- Tiny gold centers -->
+      <circle cx="18" cy="40" r="1.2" fill="#c4a882" opacity="0.4"/>
+      <circle cx="34" cy="38" r="1" fill="#c4a882" opacity="0.35"/>
+      <circle cx="46" cy="48" r="1.2" fill="#c4a882" opacity="0.4"/>
+      <circle cx="66" cy="30" r="1" fill="#c4a882" opacity="0.35"/>
+      <circle cx="82" cy="32" r="1.2" fill="#c4a882" opacity="0.4"/>
+    </svg>
+
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="wc-ring">Our Story</span>
+      </h2>
+      <div class="wc-divider reveal"></div>
+      <p class="section-subtitle reveal">How it all began</p>
+
+      <div class="story-text reveal">
+        <p>
+          It started with a chance encounter and a conversation that neither of us
+          wanted to end. From that very first moment, we knew there was something
+          extraordinary between us — a connection that felt both brand new and
+          somehow like coming home.
+        </p>
+        <span class="story-highlight reveal">"Every love story is beautiful, but ours is my favorite."</span>
+        <p>
+          Through late-night talks, spontaneous adventures, and quiet mornings
+          together, our love grew into something we never want to live without.
+          We've laughed until we cried, supported each other through every challenge,
+          and built a life full of memories we'll treasure forever.
+        </p>
+        <p>
+          Now, we're ready to begin our greatest adventure yet — and we want
+          you there to celebrate with us.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       WAVE DIVIDER
+       ============================================================ -->
+  <div class="section-divider">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path d="M0,30 C240,70 720,0 1200,50 C1350,60 1440,40 1440,40 L1440,80 L0,80 Z" fill="#fdf9f3" opacity="0.4"/>
+      <path d="M0,60 C360,20 900,70 1440,25 L1440,80 L0,80 Z" fill="#fdf9f3" opacity="0.25"/>
+    </svg>
+  </div>
+
+  <!-- ============================================================
+       VENUE
+       ============================================================ -->
+  <section id="venue">
+    <div class="section-bg venue-bg">
+      <div class="wc-blob wc-blob-1"></div>
+      <div class="wc-blob wc-blob-2"></div>
+    </div>
+
+    <!-- Wildflower accents -->
+    <!-- Daisy — top-right -->
+    <svg class="wildflower md rot-n30" style="top:8%; right:6%;" viewBox="0 0 100 140" aria-hidden="true">
+      <defs>
+        <radialGradient id="daisy-g" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#faf5f0"/>
+          <stop offset="100%" stop-color="#ede4d8"/>
+        </radialGradient>
+      </defs>
+      <path d="M50 140 Q49 110 50 75" stroke="#7d9470" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <ellipse cx="40" cy="105" rx="10" ry="4" fill="#8ab080" opacity="0.4" transform="rotate(-35 40 105)"/>
+      <ellipse cx="60" cy="98" rx="9" ry="3.5" fill="#8ab080" opacity="0.35" transform="rotate(30 60 98)"/>
+      <!-- Petals -->
+      <ellipse cx="50" cy="38" rx="8" ry="20" fill="url(#daisy-g)" opacity="0.6"/>
+      <ellipse cx="50" cy="38" rx="8" ry="20" fill="url(#daisy-g)" opacity="0.55" transform="rotate(60 50 55)"/>
+      <ellipse cx="50" cy="38" rx="8" ry="20" fill="url(#daisy-g)" opacity="0.5" transform="rotate(120 50 55)"/>
+      <ellipse cx="50" cy="38" rx="8" ry="20" fill="url(#daisy-g)" opacity="0.55" transform="rotate(180 50 55)"/>
+      <ellipse cx="50" cy="38" rx="8" ry="20" fill="url(#daisy-g)" opacity="0.5" transform="rotate(240 50 55)"/>
+      <ellipse cx="50" cy="38" rx="8" ry="20" fill="url(#daisy-g)" opacity="0.55" transform="rotate(300 50 55)"/>
+      <!-- Center -->
+      <circle cx="50" cy="55" r="8" fill="#c4a882" opacity="0.5"/>
+      <circle cx="50" cy="55" r="5" fill="#d4b890" opacity="0.4"/>
+    </svg>
+
+    <!-- Wildflower bud — bottom-left -->
+    <svg class="wildflower sm soft rot-30" style="bottom:10%; left:5%;" viewBox="0 0 60 120" aria-hidden="true">
+      <path d="M30 120 Q29 90 30 55" stroke="#7d9470" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <ellipse cx="22" cy="85" rx="8" ry="3" fill="#8ab080" opacity="0.4" transform="rotate(-40 22 85)"/>
+      <!-- Closed bud petals -->
+      <ellipse cx="26" cy="42" rx="9" ry="18" fill="#e8c5d0" opacity="0.45" transform="rotate(-8 26 42)"/>
+      <ellipse cx="34" cy="42" rx="9" ry="18" fill="#d4a0a0" opacity="0.4" transform="rotate(8 34 42)"/>
+      <ellipse cx="30" cy="38" rx="6" ry="14" fill="#e8c5d0" opacity="0.5" transform="rotate(0 30 38)"/>
+      <!-- Sepals -->
+      <ellipse cx="24" cy="54" rx="5" ry="10" fill="#8ab080" opacity="0.35" transform="rotate(-15 24 54)"/>
+      <ellipse cx="36" cy="54" rx="5" ry="10" fill="#8ab080" opacity="0.35" transform="rotate(15 36 54)"/>
+    </svg>
+
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="wc-ring">The Venue</span>
+      </h2>
+      <div class="wc-divider reveal"></div>
+      <p class="section-subtitle reveal">Where we'll say "I do"</p>
+
+      <div class="venue-card reveal-scale">
+        <h3 class="venue-name">Fox Harb’r ResortT</h3>
+        <p class="venue-address">1337 Fox Harbour Rd. Fox Harbour, NS</p>
+
+        <div class="venue-details stagger-children">
+          <div class="venue-detail">
+            <div class="venue-detail-icon">&#127942;</div>
+            <h4>Ceremony</h4>
+            <p>TBD</p>
+          </div>
+          <div class="venue-detail">
+            <div class="venue-detail-icon">&#127864;</div>
+            <h4>Reception</h4>
+            <p>TBDD</p>
+          </div>
+          <div class="venue-detail">
+            <div class="venue-detail-icon">&#128663;</div>
+            <h4>Parking</h4>
+            <p>TBD</p>
+          </div>
+          <div class="venue-detail">
+            <div class="venue-detail-icon">&#127976;</div>
+            <h4>Accommodation</h4>
+            <p>TBD</p>
+          </div>
+        </div>
+
+`
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5556.354862592013!2d-63.458429121163235!3d45.8677596370538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b5ede24bcffc4dd%3A0xe3b6d7922181c7a6!2sFox%20Harb&#39;r%20Resort!5e0!3m2!1sen!2sca!4v1774803914992!5m2!1sen!2sca"
+                class="venue-map"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       WAVE DIVIDER
+       ============================================================ -->
+  <div class="section-divider">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path d="M0,45 C300,10 600,70 900,30 C1100,10 1300,50 1440,35 L1440,80 L0,80 Z" fill="#fdf9f3" opacity="0.4"/>
+    </svg>
+  </div>
+
+  <!-- ============================================================
+       FAQ
+       ============================================================ -->
+  <section id="faq">
+    <div class="section-bg faq-bg">
+      <div class="wc-blob wc-blob-1"></div>
+      <div class="wc-blob wc-blob-2"></div>
+    </div>
+
+    <!-- Wildflower accents -->
+    <!-- Eucalyptus — left edge -->
+    <svg class="wildflower md faint rot-15" style="top:20%; left:2%;" viewBox="0 0 80 180" aria-hidden="true">
+      <path d="M40 180 Q38 130 36 80 Q34 50 40 20" stroke="#7d9470" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+      <ellipse cx="28" cy="40" rx="12" ry="7" fill="#a8c5a0" opacity="0.45" transform="rotate(-35 28 40)"/>
+      <ellipse cx="50" cy="52" rx="12" ry="7" fill="#a8c5a0" opacity="0.4" transform="rotate(30 50 52)"/>
+      <ellipse cx="26" cy="72" rx="13" ry="7.5" fill="#a8c5a0" opacity="0.45" transform="rotate(-30 26 72)"/>
+      <ellipse cx="52" cy="88" rx="12" ry="7" fill="#a8c5a0" opacity="0.4" transform="rotate(35 52 88)"/>
+      <ellipse cx="28" cy="108" rx="13" ry="7.5" fill="#a8c5a0" opacity="0.45" transform="rotate(-25 28 108)"/>
+      <ellipse cx="50" cy="125" rx="12" ry="7" fill="#a8c5a0" opacity="0.4" transform="rotate(30 50 125)"/>
+      <ellipse cx="30" cy="145" rx="14" ry="8" fill="#a8c5a0" opacity="0.45" transform="rotate(-20 30 145)"/>
+      <ellipse cx="38" cy="28" rx="8" ry="5" fill="#a8c5a0" opacity="0.35" transform="rotate(-15 38 28)"/>
+    </svg>
+
+    <!-- Lavender sprig — right edge -->
+    <svg class="wildflower md flip-x" style="bottom:15%; right:3%;" viewBox="0 0 80 160" aria-hidden="true">
+      <path d="M40 160 Q38 120 40 70" stroke="#7d9470" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <ellipse cx="38" cy="62" rx="4.5" ry="7" fill="#c5b8d4" opacity="0.6"/>
+      <ellipse cx="44" cy="54" rx="4.5" ry="7" fill="#c5b8d4" opacity="0.55"/>
+      <ellipse cx="38" cy="46" rx="4" ry="6.5" fill="#c5b8d4" opacity="0.5"/>
+      <ellipse cx="44" cy="38" rx="4" ry="6.5" fill="#c5b8d4" opacity="0.45"/>
+      <ellipse cx="40" cy="30" rx="3.5" ry="6" fill="#c5b8d4" opacity="0.4"/>
+      <ellipse cx="42" cy="22" rx="3" ry="5" fill="#c5b8d4" opacity="0.35"/>
+      <ellipse cx="32" cy="115" rx="10" ry="3.5" fill="#8ab080" opacity="0.35" transform="rotate(-35 32 115)"/>
+      <ellipse cx="50" cy="100" rx="9" ry="3" fill="#8ab080" opacity="0.3" transform="rotate(30 50 100)"/>
+    </svg>
+
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="wc-ring">Questions &amp; Answers</span>
+      </h2>
+      <div class="wc-divider reveal"></div>
+      <p class="section-subtitle reveal">Everything you need to know</p>
+
+      <div class="faq-list reveal">
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
+            What is the dress code?
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </button>
+          <div class="faq-answer" id="faq-answer-1" role="region" aria-hidden="true">
+            <p>TDB</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
+            Are children welcome?
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </button>
+          <div class="faq-answer" id="faq-answer-2" role="region" aria-hidden="true">
+            <p>Absolutely! We adore your little ones and would love for them to join us on our special day!</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
+            Can I bring a plus one?
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </button>
+          <div class="faq-answer" id="faq-answer-3" role="region" aria-hidden="true">
+            <p>Your invitation will specify if you have a plus one. Due to venue capacity, we're only able to accommodate those guests listed on the invitation. Thank you for understanding!</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
+            Will there be food options for dietary restrictions?
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </button>
+          <div class="faq-answer" id="faq-answer-4" role="region" aria-hidden="true">
+            <p>Absolutely! Please let us know about any dietary restrictions in your RSVP and we'll make sure there are options for you. Our caterer can accommodate vegetarian, vegan, gluten-free, and most allergy needs.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-5">
+            Is there parking at the venue?
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </button>
+          <div class="faq-answer" id="faq-answer-5" role="region" aria-hidden="true">
+            <p>TBD</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-6">
+            When should I RSVP by?
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </button>
+          <div class="faq-answer" id="faq-answer-6" role="region" aria-hidden="true">
+            <p>Please RSVP by August 25, 2027 so we can finalize our arrangements. You can use the RSVP form below — it only takes a minute!</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       WAVE DIVIDER
+       ============================================================ -->
+  <div class="section-divider">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path d="M0,40 C200,70 500,10 800,50 C1100,80 1300,20 1440,45 L1440,80 L0,80 Z" fill="#fdf9f3" opacity="0.4"/>
+    </svg>
+  </div>
+
+  <!-- ============================================================
+       REGISTRY
+       ============================================================ -->
+  <section id="registry">
+    <div class="section-bg registry-bg">
+      <div class="wc-blob wc-blob-1"></div>
+      <div class="wc-blob wc-blob-2"></div>
+    </div>
+
+    <!-- Wildflower accents -->
+    <!-- Small rose — top-left -->
+    <svg class="wildflower sm soft rot-30" style="top:10%; left:4%;" viewBox="0 0 80 100" aria-hidden="true">
+      <path d="M40 100 Q40 75 40 55" stroke="#7d9470" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+      <ellipse cx="32" cy="78" rx="8" ry="3" fill="#8ab080" opacity="0.35" transform="rotate(-35 32 78)"/>
+      <ellipse cx="40" cy="36" rx="13" ry="16" fill="#e8c5d0" opacity="0.45"/>
+      <ellipse cx="32" cy="38" rx="11" ry="13" fill="#d4a0a0" opacity="0.4" transform="rotate(-15 32 38)"/>
+      <ellipse cx="48" cy="38" rx="11" ry="13" fill="#d4a0a0" opacity="0.4" transform="rotate(15 48 38)"/>
+      <ellipse cx="40" cy="32" rx="7" ry="9" fill="#e8c5d0" opacity="0.5"/>
+      <circle cx="40" cy="34" r="3" fill="#c4a882" opacity="0.3"/>
+    </svg>
+
+    <!-- Daisy — bottom-right -->
+    <svg class="wildflower sm faint flip-x rot-n15" style="bottom:12%; right:5%;" viewBox="0 0 80 110" aria-hidden="true">
+      <path d="M40 110 Q40 85 40 60" stroke="#7d9470" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+      <ellipse cx="48" cy="88" rx="8" ry="3" fill="#8ab080" opacity="0.35" transform="rotate(30 48 88)"/>
+      <ellipse cx="40" cy="30" rx="7" ry="16" fill="#faf5f0" opacity="0.55"/>
+      <ellipse cx="40" cy="30" rx="7" ry="16" fill="#faf5f0" opacity="0.5" transform="rotate(60 40 44)"/>
+      <ellipse cx="40" cy="30" rx="7" ry="16" fill="#faf5f0" opacity="0.5" transform="rotate(120 40 44)"/>
+      <ellipse cx="40" cy="30" rx="7" ry="16" fill="#faf5f0" opacity="0.5" transform="rotate(180 40 44)"/>
+      <ellipse cx="40" cy="30" rx="7" ry="16" fill="#faf5f0" opacity="0.5" transform="rotate(240 40 44)"/>
+      <ellipse cx="40" cy="30" rx="7" ry="16" fill="#faf5f0" opacity="0.5" transform="rotate(300 40 44)"/>
+      <circle cx="40" cy="44" r="6" fill="#c4a882" opacity="0.45"/>
+      <circle cx="40" cy="44" r="3.5" fill="#d4b890" opacity="0.35"/>
+    </svg>
+
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="wc-ring">Gift Registry</span>
+      </h2>
+      <div class="wc-divider reveal"></div>
+      <p class="section-subtitle reveal">Your presence is the greatest gift</p>
+
+      <p class="registry-intro reveal">
+        We truly mean it when we say your presence at our wedding is the most
+        meaningful gift we could ask for. However, if you'd like to help us
+        start our new chapter together, we've registered at the following places:
+      </p>
+
+      <div class="registry-links reveal stagger-children">
+        <a href="#" class="registry-link" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          Amazon
+        </a>
+        <a href="#" class="registry-link" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          Honeymoon Fund
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       WAVE DIVIDER
+       ============================================================ -->
+  <div class="section-divider">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path d="M0,55 C360,20 720,70 1080,30 C1260,15 1380,45 1440,35 L1440,80 L0,80 Z" fill="#fdf9f3" opacity="0.35"/>
+    </svg>
+  </div>
+
+  <!-- ============================================================
+       RSVP
+       ============================================================ -->
+  <section id="rsvp">
+    <div class="section-bg rsvp-bg">
+      <div class="wc-blob wc-blob-1"></div>
+      <div class="wc-blob wc-blob-2"></div>
+      <div class="wc-blob wc-blob-3"></div>
+    </div>
+
+    <!-- Wildflower accents -->
+    <!-- Baby's breath — right side -->
+    <svg class="wildflower md rot-n15" style="top:18%; right:4%;" viewBox="0 0 100 140" aria-hidden="true">
+      <path d="M55 140 Q53 110 55 80" stroke="#8ab080" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <path d="M55 95 Q40 75 32 58" stroke="#8ab080" stroke-width="1" fill="none" stroke-linecap="round"/>
+      <path d="M55 88 Q70 70 76 54" stroke="#8ab080" stroke-width="1" fill="none" stroke-linecap="round"/>
+      <path d="M55 80 Q53 65 50 50" stroke="#8ab080" stroke-width="1" fill="none" stroke-linecap="round"/>
+      <path d="M32 58 Q26 48 22 40" stroke="#8ab080" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+      <path d="M32 58 Q36 46 40 38" stroke="#8ab080" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+      <path d="M76 54 Q82 44 86 36" stroke="#8ab080" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+      <path d="M76 54 Q72 42 70 34" stroke="#8ab080" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+      <circle cx="22" cy="38" r="3.5" fill="#faf5f0" opacity="0.6"/>
+      <circle cx="40" cy="36" r="3" fill="#faf5f0" opacity="0.55"/>
+      <circle cx="50" cy="48" r="3.5" fill="#faf5f0" opacity="0.6"/>
+      <circle cx="70" cy="32" r="3" fill="#faf5f0" opacity="0.55"/>
+      <circle cx="86" cy="34" r="3.5" fill="#faf5f0" opacity="0.6"/>
+      <circle cx="22" cy="38" r="1.2" fill="#c4a882" opacity="0.4"/>
+      <circle cx="40" cy="36" r="1" fill="#c4a882" opacity="0.35"/>
+      <circle cx="50" cy="48" r="1.2" fill="#c4a882" opacity="0.4"/>
+      <circle cx="70" cy="32" r="1" fill="#c4a882" opacity="0.35"/>
+      <circle cx="86" cy="34" r="1.2" fill="#c4a882" opacity="0.4"/>
+    </svg>
+
+    <!-- Wildflower bud — left side -->
+    <svg class="wildflower sm faint flip-x rot-n30" style="bottom:20%; left:4%;" viewBox="0 0 60 120" aria-hidden="true">
+      <path d="M30 120 Q29 90 30 55" stroke="#7d9470" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <ellipse cx="38" cy="85" rx="8" ry="3" fill="#8ab080" opacity="0.35" transform="rotate(35 38 85)"/>
+      <ellipse cx="26" cy="42" rx="9" ry="18" fill="#c5b8d4" opacity="0.4" transform="rotate(-8 26 42)"/>
+      <ellipse cx="34" cy="42" rx="9" ry="18" fill="#b0a0c4" opacity="0.35" transform="rotate(8 34 42)"/>
+      <ellipse cx="30" cy="38" rx="6" ry="14" fill="#c5b8d4" opacity="0.45"/>
+      <ellipse cx="24" cy="54" rx="5" ry="10" fill="#8ab080" opacity="0.3" transform="rotate(-15 24 54)"/>
+      <ellipse cx="36" cy="54" rx="5" ry="10" fill="#8ab080" opacity="0.3" transform="rotate(15 36 54)"/>
+    </svg>
+
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="wc-ring">RSVP</span>
+      </h2>
+      <div class="wc-divider reveal"></div>
+      <p class="section-subtitle reveal">We can't wait to celebrate with you</p>
+
+      <form class="rsvp-form reveal" id="rsvpForm" novalidate>
+        <div class="form-group">
+          <label for="rsvpName">Your Full Name</label>
+          <input type="text" id="rsvpName" name="name" placeholder="e.g. Jane Smith" required>
+        </div>
+
+        <fieldset class="form-group" style="border:none; padding:0;">
+          <legend>Will You Be Attending?</legend>
+          <div class="radio-group">
+            <label class="radio-option">
+              <input type="radio" name="attending" value="yes" required>
+              <span>Joyfully Accepts</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="attending" value="no">
+              <span>Regretfully Declines</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="form-group default-hidden-form-section" id="guestCountGroup">
+          <label for="rsvpGuests">Number of Guests (Including Yourself)</label>
+          <input type="number" id="rsvpGuests" name="guests" min="1" max="4" value="1">
+        </div>
+
+        <div class="form-group default-hidden-form-section" id="dietary">
+          <label for="rsvpDietary">Dietary Restrictions</label>
+          <input type="text" id="rsvpDietary" name="dietary" placeholder="e.g. Vegetarian, nut allergy, none">
+        </div>
+
+        <div class="form-group">
+          <label for="rsvpMessage">Message for the Couple</label>
+          <textarea id="rsvpMessage" name="message" placeholder="Share your well-wishes or let us know anything we should know..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Send RSVP</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer" style="position:relative;">
+    <!-- Wildflower accent — small centered lavender -->
+    <svg class="wildflower sm" style="position:relative; opacity:0.18; margin:0 auto 1rem; display:block;" viewBox="0 0 80 60" aria-hidden="true">
+      <path d="M40 60 Q40 45 40 30" stroke="#7d9470" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <ellipse cx="37" cy="25" rx="3.5" ry="6" fill="#c5b8d4" opacity="0.6"/>
+      <ellipse cx="43" cy="20" rx="3.5" ry="6" fill="#c5b8d4" opacity="0.55"/>
+      <ellipse cx="38" cy="14" rx="3" ry="5" fill="#c5b8d4" opacity="0.5"/>
+      <ellipse cx="43" cy="9" rx="2.5" ry="4.5" fill="#c5b8d4" opacity="0.45"/>
+      <ellipse cx="40" cy="5" rx="2" ry="3.5" fill="#c5b8d4" opacity="0.4"/>
+      <ellipse cx="32" cy="40" rx="8" ry="3" fill="#8ab080" opacity="0.3" transform="rotate(-35 32 40)"/>
+      <ellipse cx="50" cy="38" rx="7" ry="2.5" fill="#8ab080" opacity="0.25" transform="rotate(30 50 38)"/>
+    </svg>
+    <div class="footer-names">Jamie &amp; Hannah</div>
+    <div class="footer-date">September 25, 2027</div>
+    <div class="footer-note">Made with love</div>
+  </footer>
+
+  <!-- ============================================================
+       JAVASCRIPT
+       ============================================================ -->
+  <script src="index.js"></script>
+
+</body>
+</html>
