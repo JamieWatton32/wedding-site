@@ -463,21 +463,21 @@ section {
 }
 
 /* ---------- FAQ ---------- */
-.faq-list {
+.centered-list {
   max-width: 700px;
   margin: 0 auto;
 }
 
-.faq-item {
+.centered-list-item {
   border-bottom: 1px solid var(--border);
   overflow: hidden;
 }
 
-.faq-item:first-child {
+.centered-list-item:first-child {
   border-top: 1px solid var(--border);
 }
 
-.faq-question {
+.centered-list-button {
   width: 100%;
   background: none;
   border: none;
@@ -494,11 +494,11 @@ section {
   transition: color 0.3s ease;
 }
 
-.faq-question:hover {
+.centered-list-button:hover {
   color: var(--pink);
 }
 
-.faq-icon {
+.list-button-icon {
   width: 20px;
   height: 20px;
   flex-shrink: 0;
@@ -507,21 +507,21 @@ section {
   stroke: var(--text-soft);
 }
 
-.faq-item.open .faq-icon {
+.centered-list-item.open .list-button-icon {
   transform: rotate(45deg);
 }
 
-.faq-answer {
+.list-answer {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s ease, padding 0.4s ease;
 }
 
-.faq-item.open .faq-answer {
+.centered-list-item.open .list-answer {
   max-height: 300px;
 }
 
-.faq-answer p {
+.list-answer p {
   padding-bottom: 1.4rem;
   font-size: 1rem;
   color: var(--text);

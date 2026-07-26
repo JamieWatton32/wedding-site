@@ -151,10 +151,10 @@
   }
 
   function initFaqAccordion() {
-    const faqItems = document.querySelectorAll('.faq-item');
+    const faqItems = document.querySelectorAll('.centered-list-item');
 
     faqItems.forEach(function (item) {
-      const question = item.querySelector('.faq-question');
+      const question = item.querySelector('.centered-list-button');
 
       if (!question) {
         return;
@@ -166,12 +166,12 @@
         faqItems.forEach(function (otherItem) {
           otherItem.classList.remove('open');
 
-          const otherQuestion = otherItem.querySelector('.faq-question');
+          const otherQuestion = otherItem.querySelector('.centered-list-button');
           if (otherQuestion) {
             otherQuestion.setAttribute('aria-expanded', 'false');
           }
 
-          const answer = otherItem.querySelector('.faq-answer');
+          const answer = otherItem.querySelector('.list-answer');
           if (answer) {
             answer.setAttribute('aria-hidden', 'true');
           }
@@ -181,7 +181,7 @@
           item.classList.add('open');
           question.setAttribute('aria-expanded', 'true');
 
-          const answer = item.querySelector('.faq-answer');
+          const answer = item.querySelector('.list-answer');
           if (answer) {
             answer.setAttribute('aria-hidden', 'false');
           }
