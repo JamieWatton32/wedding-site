@@ -3,6 +3,19 @@
    Wedding Site: Jamie & Hannah
    ============================================================ */
 
+:root {
+  --paper: #fffaf0;
+  --paper-warm: #fdf6de;
+  --text: #5a5348;
+  --text-soft: #8f8677;
+  --yellow: #fbed97;
+  --pink: #f8b1ac;
+  --green: #bbcd69;
+  --blue: #9fbbed;
+  --border: rgba(138, 130, 116, 0.18);
+  --shadow: rgba(91, 81, 70, 0.08);
+}
+
 /* ---------- Reset & Base ---------- */
 *, *::before, *::after {
   margin: 0;
@@ -19,8 +32,8 @@ html {
 
 body {
   font-family: 'Cormorant Garamond', 'Georgia', serif;
-  color: #4a4a4a;
-  background-color: #fdf9f3;
+  color: var(--text);
+  background-color: var(--paper);
   line-height: 1.7;
   overflow-x: hidden;
 }
@@ -51,7 +64,7 @@ h1, h2, h3, h4 {
 .section-title {
   font-family: 'Great Vibes', cursive;
   font-size: 3rem;
-  color: #7d6b5d;
+  color: var(--text);
   text-align: center;
   margin-bottom: 0.5em;
   letter-spacing: 0.02em;
@@ -60,7 +73,7 @@ h1, h2, h3, h4 {
 .section-subtitle {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.15rem;
-  color: #9b8e82;
+  color: var(--text-soft);
   text-align: center;
   max-width: 600px;
   margin: 0 auto 2.5rem;
@@ -89,19 +102,19 @@ section {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(253, 249, 243, 0.92);
+  background: rgba(255, 250, 240, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(189, 169, 153, 0.2);
-  transform: translateY(-100%);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-bottom: 1px solid var(--border);
+  /* transform: translateY(-100%);
+  transition: transform 0.4s ease, box-shadow 0.4s ease; */
   box-shadow: none;
 }
 
-.site-nav.visible {
+/* .site-nav.visible {
   transform: translateY(0);
-  box-shadow: 0 2px 20px rgba(125, 107, 93, 0.08);
-}
+  box-shadow: 0 2px 20px var(--shadow);
+} */
 
 .nav-inner {
   display: flex;
@@ -115,7 +128,7 @@ section {
 .nav-brand {
   font-family: 'Great Vibes', cursive;
   font-size: 1.5rem;
-  color: #7d6b5d;
+  color: var(--text);
   white-space: nowrap;
 }
 
@@ -131,7 +144,7 @@ section {
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #9b8e82;
+  color: var(--text-soft);
   transition: color 0.3s ease;
   position: relative;
   padding-bottom: 2px;
@@ -144,13 +157,13 @@ section {
   left: 0;
   width: 0;
   height: 1.5px;
-  background: linear-gradient(90deg, #c4a882, #d4a0a0);
+  background: linear-gradient(90deg, var(--green), var(--pink));
   transition: width 0.3s ease;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: #7d6b5d;
+  color: var(--text);
 }
 
 .nav-links a:hover::after,
@@ -173,7 +186,7 @@ section {
   display: block;
   width: 24px;
   height: 2px;
-  background: #7d6b5d;
+  background: var(--text);
   border-radius: 2px;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -201,6 +214,23 @@ section {
   padding: 2rem 1rem;
 }
 
+.home-hero {
+  background-image:
+    linear-gradient(rgba(255, 250, 240, 0.34), rgba(255, 250, 240, 0.34)),
+    url('../assets/home-page-cropped.jpeg');
+  background-size: cover;
+  background-position: center 38%;
+  background-repeat: no-repeat;
+}
+
+.home-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 250, 240, 0.18) 0%, rgba(255, 250, 240, 0.28) 100%);
+  z-index: 1;
+}
+
 .hero-content {
   position: relative;
   z-index: 2;
@@ -209,16 +239,16 @@ section {
 .hero-names {
   font-family: 'Great Vibes', cursive;
   font-size: 5rem;
-  color: #7d6b5d;
+  color: var(--text);
   line-height: 1.2;
   margin-bottom: 0.3em;
-  text-shadow: 0 2px 30px rgba(253, 249, 243, 0.8);
+  text-shadow: 0 2px 30px rgba(255, 250, 240, 0.85);
 }
 
 .hero-ampersand {
   display: block;
   font-size: 0.55em;
-  color: #c4a882;
+  color: var(--text);
   margin: -0.1em 0;
 }
 
@@ -227,7 +257,7 @@ section {
   font-size: 1.4rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: #9b8e82;
+  color: var(--text);
   margin-bottom: 2rem;
   font-weight: 300;
 }
@@ -235,7 +265,7 @@ section {
 .hero-tagline {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.1rem;
-  color: #c4a882;
+  color: var(--text);
   font-style: italic;
   margin-bottom: 3rem;
 }
@@ -258,7 +288,7 @@ section {
   font-family: 'Cormorant Garamond', serif;
   font-size: 2.8rem;
   font-weight: 300;
-  color: #7d6b5d;
+  color: var(--text);
   line-height: 1;
 }
 
@@ -267,7 +297,7 @@ section {
   font-size: 0.75rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #bda999;
+  color: var(--text-soft);
 }
 
 
@@ -280,7 +310,7 @@ section {
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  color: #bda999;
+  color: var(--text-soft);
   font-size: 0.7rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -290,7 +320,7 @@ section {
 .scroll-indicator svg {
   width: 20px;
   height: 20px;
-  stroke: #bda999;
+  stroke: var(--text-soft);
 }
 
 @keyframes float {
@@ -302,7 +332,7 @@ section {
 .story-text {
   font-size: 1.15rem;
   line-height: 1.9;
-  color: #5c5c5c;
+  color: var(--text);
   text-align: center;
   max-width: 700px;
   margin: 0 auto;
@@ -315,34 +345,34 @@ section {
 .story-highlight {
   font-family: 'Great Vibes', cursive;
   font-size: 1.8rem;
-  color: #c4a882;
+  color: var(--green);
   display: block;
   margin: 1.5rem 0;
 }
 
 /* ---------- Venue ---------- */
 .venue-card {
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 250, 240, 0.72);
   border-radius: 16px;
   padding: 3rem;
   max-width: 700px;
   margin: 0 auto;
   backdrop-filter: blur(8px);
-  border: 1px solid rgba(189, 169, 153, 0.15);
-  box-shadow: 0 8px 32px rgba(125, 107, 93, 0.06);
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 32px var(--shadow);
 }
 
 .venue-name {
   font-family: 'Great Vibes', cursive;
   font-size: 2.2rem;
-  color: #7d6b5d;
+  color: var(--text);
   text-align: center;
   margin-bottom: 0.3em;
 }
 
 .venue-address {
   text-align: center;
-  color: #9b8e82;
+  color: var(--text-soft);
   font-size: 1.05rem;
   margin-bottom: 2rem;
   font-style: italic;
@@ -362,7 +392,7 @@ section {
 .venue-detail-icon {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
-  color: #c4a882;
+  color: var(--pink);
 }
 
 .venue-detail h4 {
@@ -371,13 +401,13 @@ section {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #7d6b5d;
+  color: var(--text);
   margin-bottom: 0.4em;
 }
 
 .venue-detail p {
   font-size: 0.95rem;
-  color: #8a8a8a;
+  color: var(--text-soft);
   line-height: 1.6;
 }
 
@@ -387,14 +417,14 @@ section {
    max-width: 600px;
    aspect-ratio: 3 / 1; /* preserves original 600×200 ratio */
    border-radius: 12px;
-   background: linear-gradient(135deg, #e8e0d5 0%, #d5cfc6 100%);
+  background: linear-gradient(135deg, var(--yellow) 0%, var(--blue) 100%);
    display: flex;
    align-items: center;
    justify-content: center;
-   color: #9b8e82;
+  color: var(--text-soft);
    font-style: italic;
    font-size: 0.95rem;
-   border: 1px solid rgba(189, 169, 153, 0.2);
+  border: 1px solid var(--border);
    box-sizing: border-box;
  }
 
@@ -439,12 +469,12 @@ section {
 }
 
 .faq-item {
-  border-bottom: 1px solid rgba(189, 169, 153, 0.25);
+  border-bottom: 1px solid var(--border);
   overflow: hidden;
 }
 
 .faq-item:first-child {
-  border-top: 1px solid rgba(189, 169, 153, 0.25);
+  border-top: 1px solid var(--border);
 }
 
 .faq-question {
@@ -455,7 +485,7 @@ section {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.15rem;
   font-weight: 700;
-  color: #7d6b5d;
+  color: var(--text);
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -465,7 +495,7 @@ section {
 }
 
 .faq-question:hover {
-  color: #5a4e43;
+  color: var(--pink);
 }
 
 .faq-icon {
@@ -474,7 +504,7 @@ section {
   flex-shrink: 0;
   margin-left: 1rem;
   transition: transform 0.3s ease;
-  stroke: #bda999;
+  stroke: var(--text-soft);
 }
 
 .faq-item.open .faq-icon {
@@ -494,7 +524,7 @@ section {
 .faq-answer p {
   padding-bottom: 1.4rem;
   font-size: 1rem;
-  color: #6e6e6e;
+  color: var(--text);
   line-height: 1.8;
 }
 
@@ -504,7 +534,7 @@ section {
   max-width: 600px;
   margin: 0 auto 2.5rem;
   font-size: 1.05rem;
-  color: #6e6e6e;
+  color: var(--text);
   line-height: 1.8;
 }
 
@@ -520,23 +550,23 @@ section {
   align-items: center;
   gap: 0.5rem;
   padding: 1rem 2rem;
-  background: rgba(255, 255, 255, 0.6);
-  border: 1px solid rgba(189, 169, 153, 0.25);
+  background: rgba(255, 250, 240, 0.78);
+  border: 1px solid var(--border);
   border-radius: 50px;
   font-family: 'Cormorant Garamond', serif;
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.08em;
-  color: #7d6b5d;
+  color: var(--text);
   transition: all 0.3s ease;
   backdrop-filter: blur(6px);
 }
 
 .registry-link:hover {
-  background: rgba(196, 168, 130, 0.15);
-  border-color: rgba(196, 168, 130, 0.4);
+  background: rgba(251, 237, 151, 0.28);
+  border-color: rgba(159, 187, 237, 0.5);
   transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(125, 107, 93, 0.1);
+  box-shadow: 0 4px 16px var(--shadow);
 }
 
 /* ---------- RSVP ---------- */
@@ -561,7 +591,7 @@ section {
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #7d6b5d;
+  color: var(--text);
   padding: 0;
 }
 
@@ -570,11 +600,11 @@ section {
 .form-group select {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.05rem;
-  color: #4a4a4a;
+  color: var(--text);
   padding: 0.85rem 1rem;
-  border: 1px solid rgba(189, 169, 153, 0.3);
+  border: 1px solid var(--border);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 250, 240, 0.72);
   backdrop-filter: blur(6px);
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
   outline: none;
@@ -583,8 +613,8 @@ section {
 .form-group input:focus,
 .form-group textarea:focus,
 .form-group select:focus {
-  border-color: #c4a882;
-  box-shadow: 0 0 0 3px rgba(196, 168, 130, 0.12);
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(159, 187, 237, 0.18);
 }
 
 .form-group textarea {
@@ -611,7 +641,7 @@ section {
   -webkit-appearance: none;
   width: 18px;
   height: 18px;
-  border: 2px solid rgba(189, 169, 153, 0.4);
+  border: 2px solid rgba(159, 187, 237, 0.45);
   border-radius: 50%;
   cursor: pointer;
   position: relative;
@@ -620,7 +650,7 @@ section {
 }
 
 .radio-option input[type="radio"]:checked {
-  border-color: #c4a882;
+  border-color: var(--green);
 }
 
 .radio-option input[type="radio"]:checked::after {
@@ -631,14 +661,14 @@ section {
   transform: translate(-50%, -50%);
   width: 36px;
   height: 36px;
-  background: #c4a882;
+  background: var(--green);
   border-radius: 50%;
 }
 
 .radio-option span {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.05rem;
-  color: #5c5c5c;
+  color: var(--text);
 }
 
 /* Guest count - conditional */
@@ -662,7 +692,7 @@ section {
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: #fff;
-  background: linear-gradient(135deg, #bda999 0%, #c4a882 50%, #d4a0a0 100%);
+  background: linear-gradient(135deg, var(--yellow) 0%, var(--pink) 50%, var(--blue) 100%);
   border: none;
   border-radius: 50px;
   padding: 1rem 3rem;
@@ -674,7 +704,7 @@ section {
 
 .btn-submit:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(196, 168, 130, 0.3);
+  box-shadow: 0 6px 24px rgba(159, 187, 237, 0.24);
 }
 
 .btn-submit:active {
@@ -685,7 +715,7 @@ section {
 .site-footer {
   text-align: center;
   padding: 3rem 1rem;
-  color: #bda999;
+  color: var(--text-soft);
   font-size: 0.9rem;
   position: relative;
 }
@@ -693,7 +723,7 @@ section {
 .footer-names {
   font-family: 'Great Vibes', cursive;
   font-size: 2rem;
-  color: #c4a882;
+  color: var(--pink);
   margin-bottom: 0.3em;
 }
 
@@ -706,7 +736,7 @@ section {
 
 .footer-note {
   font-size: 0.75rem;
-  color: #ccc2b8;
+  color: var(--text-soft);
 }
 
 /* ---------- Section Divider (SVG wave) ---------- */
@@ -779,7 +809,7 @@ section {
     left: 0;
     right: 0;
     z-index: 1001;
-    background: #f0ebe3;
+    background: var(--paper-warm);
     flex-direction: column;
     gap: 0;
     padding: 0;
@@ -793,15 +823,15 @@ section {
 
   .nav-links.open {
     max-height: 500px;
-    box-shadow: 0 8px 24px rgba(125, 107, 93, 0.15);
+    box-shadow: 0 8px 24px var(--shadow);
   }
 
   .nav-links a {
     font-size: 1.05rem;
     display: block;
     padding: 0.9rem 1.5rem;
-    color: #5c4f43;
-    border-bottom: 1px solid rgba(189, 169, 153, 0.25);
+    color: var(--text);
+    border-bottom: 1px solid var(--border);
     transition: background 0.2s ease, color 0.2s ease;
   }
 
@@ -811,8 +841,8 @@ section {
 
   .nav-links a:hover,
   .nav-links a.active {
-    background: rgba(189, 169, 153, 0.15);
-    color: #7d6b5d;
+    background: rgba(251, 237, 151, 0.24);
+    color: var(--text);
   }
 
   .registry-links {
@@ -824,6 +854,10 @@ section {
 @media (max-width: 480px) {
   .hero-names {
     font-size: 2.5rem;
+  }
+
+  .home-hero {
+    background-position: 30% 40%;
   }
 
   .section-title {

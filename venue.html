@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Venue | Jamie &amp; Hannah</title>
+  <meta name="description" content="Venue details for Jamie and Hannah's wedding.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/watercolor.css">
+  <link rel="stylesheet" href="styles/animations.css">
+</head>
+<body>
+  <nav class="site-nav visible" id="siteNav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand" aria-label="Back to home">J &amp; H</a>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" data-nav>Home</a>
+        <a href="story.html" data-nav>Our Story</a>
+        <a href="venue.html" data-nav>Venue</a>
+        <a href="faq.html" data-nav>FAQ</a>
+        <a href="registry.html" data-nav>Registry</a>
+        <a href="rsvp.html" data-nav>RSVP</a>
+      </div>
+    </div>
+  </nav>
+
+  <section id="venue">
+    <div class="section-bg venue-bg">
+      <div class="wc-blob wc-blob-1"></div>
+      <div class="wc-blob wc-blob-2"></div>
+    </div>
+
+    <div class="container">
+      <h2 class="section-title reveal"><span class="wc-ring">The Venue</span></h2>
+      <div class="wc-divider reveal"></div>
+      <p class="section-subtitle reveal">Where we'll say "I do"</p>
+
+      <div class="venue-card reveal-scale">
+        <h3 class="venue-name">Fox Harb'r Resort</h3>
+        <p class="venue-address">1337 Fox Harbour Rd. Fox Harbour, NS</p>
+
+        <div class="venue-details stagger-children">
+          <div class="venue-detail">
+            <div class="venue-detail-icon">&#127942;</div>
+            <h4>Ceremony</h4>
+            <p>TBD</p>
+          </div>
+          <div class="venue-detail">
+            <div class="venue-detail-icon">&#127864;</div>
+            <h4>Reception</h4>
+            <p>TBD</p>
+          </div>
+          <div class="venue-detail">
+            <div class="venue-detail-icon">&#128663;</div>
+            <h4>Parking</h4>
+            <p>TBD</p>
+          </div>
+          <div class="venue-detail">
+            <div class="venue-detail-icon">&#127976;</div>
+            <h4>Accommodation</h4>
+            <p>TBD</p>
+          </div>
+        </div>
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5556.354862592013!2d-63.458429121163235!3d45.8677596370538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b5ede24bcffc4dd%3A0xe3b6d7922181c7a6!2sFox%20Harb'r%20Resort!5e0!3m2!1sen!2sca!4v1774803914992!5m2!1sen!2sca"
+          class="venue-map"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-names">Jamie &amp; Hannah</div>
+    <div class="footer-date">September 25, 2027</div>
+    <div class="footer-note">Made with love</div>
+  </footer>
+
+  <script src="scripts/shared.js"></script>
+  <script src="scripts/venue.js"></script>
+</body>
+</html>

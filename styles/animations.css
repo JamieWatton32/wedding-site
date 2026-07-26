@@ -1,6 +1,6 @@
 /* ============================================================
    ANIMATIONS.CSS — Scroll-triggered fade/slide transitions
-   Uses classes toggled by Intersection Observer in index.js
+  Uses classes toggled by Intersection Observer in scripts/shared.js
    ============================================================ */
 
 /* ---------- Base: hidden state for animated elements ---------- */
