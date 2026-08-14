@@ -150,51 +150,89 @@
     }
   }
 
-  function initFaqAccordion() {
-    const faqItems = document.querySelectorAll('.centered-list-item');
+function initFaqAccordion() {
+  const faqItems = document.querySelectorAll('.centered-list-item');
+  const COLLAPSE_FALLBACK_MS = 300; // fallback if no transition is detected
 
-    faqItems.forEach(function (item) {
-      const question = item.querySelector('.centered-list-button');
+  function closeItem(item) {
+    const question = item.querySelector('.centered-list-button');
+    const answer = item.querySelector('.list-answer');
 
-      if (!question) {
+    item.classList.remove('open');
+    if (question) question.setAttribute('aria-expanded', 'false');
+    if (answer) answer.setAttribute('aria-hidden', 'true');
+  }
+
+  function openItem(item) {
+    const question = item.querySelector('.centered-list-button');
+    const answer = item.querySelector('.list-answer');
+
+    item.classList.add('open');
+    if (question) question.setAttribute('aria-expanded', 'true');
+    if (answer) answer.setAttribute('aria-hidden', 'false');
+  }
+
+  faqItems.forEach(function (item) {
+    const question = item.querySelector('.centered-list-button');
+    if (!question) return;
+
+    question.addEventListener('click', function () {
+      const isOpen = item.classList.contains('open');
+      const currentlyOpenItem = Array.from(faqItems).find(function (i) {
+        return i !== item && i.classList.contains('open');
+      });
+
+      // Clicking the already-open item: just close it
+      if (isOpen) {
+        closeItem(item);
         return;
       }
 
-      question.addEventListener('click', function () {
-        const isOpen = item.classList.contains('open');
+      // No other item open: just open this one
+      if (!currentlyOpenItem) {
+        openItem(item);
+        return;
+      }
 
-        faqItems.forEach(function (otherItem) {
-          otherItem.classList.remove('open');
+      // Another item is open: close it first, then open the new one
+      // once its collapse transition finishes
+      const answerToClose = currentlyOpenItem.querySelector('.list-answer');
 
-          const otherQuestion = otherItem.querySelector('.centered-list-button');
-          if (otherQuestion) {
-            otherQuestion.setAttribute('aria-expanded', 'false');
-          }
+      let opened = false;
+      function handleTransitionEnd(e) {
+        // Ignore bubbled transitions from children
+        if (e.target !== answerToClose) return;
+        finishAndOpen();
+      }
 
-          const answer = otherItem.querySelector('.list-answer');
-          if (answer) {
-            answer.setAttribute('aria-hidden', 'true');
-          }
-        });
-
-        if (!isOpen) {
-          item.classList.add('open');
-          question.setAttribute('aria-expanded', 'true');
-
-          const answer = item.querySelector('.list-answer');
-          if (answer) {
-            answer.setAttribute('aria-hidden', 'false');
-          }
+      function finishAndOpen() {
+        if (opened) return;
+        opened = true;
+        if (answerToClose) {
+          answerToClose.removeEventListener('transitionend', handleTransitionEnd);
         }
-      });
+        openItem(item);
+      }
+
+      closeItem(currentlyOpenItem);
+
+      if (answerToClose) {
+        answerToClose.addEventListener('transitionend', handleTransitionEnd);
+        // Fallback in case there's no CSS transition defined
+        setTimeout(finishAndOpen, COLLAPSE_FALLBACK_MS);
+      } else {
+        openItem(item);
+      }
     });
-  }
+  });
+}
 
   function initRsvpForm() {
     const attendingRadios = document.querySelectorAll('input[name="attending"]');
     const guestCountGroup = document.getElementById('guestCountGroup');
     const dietaryGroup = document.getElementById('dietary');
     const rsvpForm = document.getElementById('rsvpForm');
+    const rsvpStatus = document.getElementById('rsvpStatus');
 
     if (attendingRadios.length && guestCountGroup && dietaryGroup) {
       attendingRadios.forEach(function (radio) {
@@ -231,6 +269,21 @@
       }, 2000);
     }
 
+    function showStatus(message, state) {
+      if (!rsvpStatus) {
+        return;
+      }
+
+      rsvpStatus.textContent = message;
+      rsvpStatus.classList.remove('success', 'error');
+
+      if (state) {
+        rsvpStatus.classList.add(state);
+      }
+
+      rsvpStatus.classList.add('visible');
+    }
+
     rsvpForm.addEventListener('submit', function (e) {
       e.preventDefault();
 
@@ -250,11 +303,13 @@
       const message = messageField.value.trim();
 
       if (!name) {
+        showStatus('Please enter your name before sending the RSVP.', 'error');
         highlightField('rsvpName');
         return;
       }
 
       if (!attendingEl) {
+        showStatus('Please choose whether you are attending before sending the RSVP.', 'error');
         const radioGroup = document.querySelector('.radio-group');
         if (radioGroup) {
           radioGroup.style.outline = '2px solid #d4a0a0';
@@ -290,9 +345,18 @@
       body += '\n================================\n';
       body += 'Sent from the wedding website';
 
-      window.location.href = 'mailto:' + WEDDING_EMAIL +
+      const mailtoUrl = 'mailto:' + WEDDING_EMAIL +
         '?subject=' + encodeURIComponent(subject) +
         '&body=' + encodeURIComponent(body);
+
+      const mailWindow = window.open(mailtoUrl, '_blank');
+
+      if (mailWindow) {
+        showStatus('Your mail window opened. Send the email from your mail app to finish the RSVP.', 'success');
+      } else {
+        window.location.href = mailtoUrl;
+        showStatus('Your browser blocked the popup. Please allow popups or check your mail app.', 'error');
+      }
     });
   }
 

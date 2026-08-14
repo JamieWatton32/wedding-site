@@ -12,7 +12,8 @@
   <link rel="stylesheet" href="styles/watercolor.css">
   <link rel="stylesheet" href="styles/animations.css">
 </head>
-<body>
+<body class="sub-page">
+  <div class="subpage-banner" aria-hidden="true"></div>
   <nav class="site-nav visible" id="siteNav">
     <div class="nav-inner">
       <a href="index.html" class="nav-brand" aria-label="Back to home">J &amp; H</a>
@@ -27,7 +28,7 @@
         <a href="accommodations.html" data-nav>Accomodations</a>
         <a href="venue.html" data-nav>Venue</a>
         <a href="faq.html" data-nav>FAQ</a>
-        <a href="rsvp.html" data-nav>RSVP</a>
+        
       </div>
     </div>
   </nav>
@@ -80,6 +81,7 @@
         </div>
 
         <button type="submit" class="btn-submit">Send RSVP</button>
+        <p class="rsvp-status" id="rsvpStatus" aria-live="polite"></p>
       </form>
     </div>
   </section>
