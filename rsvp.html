@@ -9,7 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="styles/watercolor.css">
   <link rel="stylesheet" href="styles/animations.css">
 </head>
 <body class="sub-page">
@@ -25,10 +24,11 @@
   <div class="nav-links" id="navLinks">
         <a href="index.html" data-nav>Home</a>
         <a href="story.html" data-nav>Our Story</a>
-        <a href="accommodations.html" data-nav>Accomodations</a>
         <a href="venue.html" data-nav>Venue</a>
         <a href="faq.html" data-nav>FAQ</a>
-        
+        <a href="accommodations.html" data-nav>Accomodations</a>
+        <a href="rsvp.html" data-nav>RSVP</a>
+        <a href="registry.html" data-nav>Registry</a>
       </div>
     </div>
   </nav>
@@ -45,7 +45,13 @@
       <div class="wc-divider reveal"></div>
       <p class="section-subtitle reveal">We can't wait to celebrate with you</p>
 
-      <form class="rsvp-form reveal" id="rsvpForm" novalidate>
+      <div class="rsvp-unavailable reveal" id="rsvpUnavailable" role="status" aria-live="polite">
+        <p>
+          We are overjoyed that you are excited for our wedding and want to RSVP already, but for planning purposes we are not accepting any quite yet. We will notify our guests when they may RSVP.
+        </p>
+      </div>
+
+      <form class="rsvp-form reveal" id="rsvpForm" novalidate hidden>
         <div class="form-group">
           <label for="rsvpName">Your Full Name</label>
           <input type="text" id="rsvpName" name="name" placeholder="e.g. Jane Smith" required>
