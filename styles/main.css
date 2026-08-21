@@ -90,6 +90,9 @@ a {
 ul {
   list-style: none;
 }
+.pink{
+  color: var(--pink);
+}
 
 /* ---------- Typography ---------- */
 h1, h2, h3, h4 {
@@ -515,20 +518,28 @@ section {
 .centered-list-item {
   border-bottom: 1px solid var(--border);
   overflow: hidden;
+  background: rgba(255, 250, 240, 0.48);
+  transition: background-color 0.25s ease;
 }
 
 .centered-list-item:first-child {
   border-top: 1px solid var(--border);
 }
 
+.centered-list-item.open {
+  background: rgba(255, 250, 240, 0.82);
+}
+
 .centered-list-button {
   width: 100%;
   background: none;
   border: none;
-  padding: 1.4rem 0;
+  padding: 1.25rem 0.2rem;
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0.01em;
   color: var(--text);
   cursor: pointer;
   display: flex;
@@ -558,18 +569,54 @@ section {
 .list-answer {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.4s ease;
+  padding: 0 0.2rem;
+  transition: max-height 0.45s ease, padding 0.45s ease;
 }
 
 .centered-list-item.open .list-answer {
-  max-height: 300px;
+  max-height: 560px;
+  padding-bottom: 1.3rem;
+}
+
+.list-answer a {
+  display: inline-block;
+  font-size: 1.16rem;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  margin-bottom: 0.55rem;
+  transition: color 0.25s ease;
+}
+
+.list-answer a:hover {
+  color: var(--pink);
 }
 
 .list-answer p {
-  padding-bottom: 1.4rem;
-  font-size: 1.1rem;
+  padding-bottom: 0;
+  margin-bottom: 0.45rem;
+  font-size: 1.06rem;
   color: var(--text);
-  line-height: 1.8;
+  line-height: 1.7;
+}
+
+.list-answer p:last-child {
+  margin-bottom: 0;
+}
+
+.list-answer-badge {
+  display: inline-block;
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text);
+  background: rgba(251, 237, 151, 0.4);
+  border: 1px solid rgba(217, 140, 140, 0.25);
+  border-radius: 999px;
+  padding: 0.16rem 0.65rem;
 }
 
 /* ---------- Registry ---------- */
@@ -939,6 +986,25 @@ section {
     flex-direction: column;
     align-items: center;
   }
+
+  .centered-list-button {
+    font-size: 1.12rem;
+    padding: 1.05rem 0.1rem;
+  }
+
+  .list-answer a {
+    font-size: 1.08rem;
+  }
+
+  .list-answer p {
+    font-size: 1rem;
+    line-height: 1.62;
+    margin-bottom: 0.4rem;
+  }
+
+  .centered-list-item.open .list-answer {
+    max-height: 640px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -988,5 +1054,24 @@ section {
 
   .rsvp-form {
     gap: 1.2rem;
+  }
+
+  .centered-list-button {
+    font-size: 1.04rem;
+    line-height: 1.3;
+  }
+
+  .list-button-icon {
+    width: 17px;
+    height: 17px;
+    margin-left: 0.75rem;
+  }
+
+  .list-answer a {
+    font-size: 1.02rem;
+  }
+
+  .list-answer p {
+    font-size: 0.98rem;
   }
 }
