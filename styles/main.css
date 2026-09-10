@@ -390,9 +390,9 @@ section {
 }
 
 .story-highlight {
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Great Vibes';
   font-size: 1.8rem;
-  color: var(--green);
+  color: var(--text-soft);
   display: block;
   margin: 1.5rem 0;
 }
